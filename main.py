@@ -20,6 +20,10 @@ def index():
 def sign_up():
     return render_template("signUp.html")
 
+@app.route("/bmi")
+def bmi_page():
+    return render_template("bmi.html")
+
 # @app.route("/signUp")
 # def signUp():
 #     return render_template("signUp.html")
