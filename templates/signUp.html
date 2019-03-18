@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="../static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="../static/styles.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for("static",flename="styles.css") }}">
-</head> -->
+
+</head>
 
 <body>
   <nav class="navbar navbar-nav  navbar-fixed-top bg-primary" role="navigation">
@@ -32,12 +32,13 @@
   <div class="jumbotron">
     <h2 align=center> Sign Up Form </h2>
     <h4 align=center>Subscribe to receive updates directly to your inbox </h4>
-  <form class="form-signin" method=post action ="/signUp">
-    <label for={{inputName}}>Name</label>
-    <input type="name" name={{inputName}} id="inputName" class="form-control" placeholder="Name" required="required"><br>
-    <label for={{inputEmail}}>Email address</label>
-    <input type="email" name={{inputEmail}} id="inputEmail" class="form-control" placeholder="Email address" required="required"><br>
-    <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Sign up</button>
+  <form class="form-signin" method="post" action ="/output">
+    <label for="your_name">Name:</label>
+    <input type="" id="inputName" class="form-control" name="your_name" required="required" placeholder="Name"><br>
+    <label for="your_email">Email address:</label>
+    <input type="email" id="inputName" class="form-control" name="your_email" required="required" placeholder="Email"><br>
+    <input type="submit" value="Submit" id="btnSignup" class="btn btn-lg btn-primary btn-block">
+
   </form>
   </div>
 
