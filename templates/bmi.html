@@ -8,36 +8,41 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="../static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="../static/styles.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for("static",flename="styles.css") }}">
-</head> -->
 
 <body>
   <nav class="navbar navbar-nav  navbar-fixed-top bg-primary" role="navigation">
     <div class="container-fluid">
       <ul class="nav navbar-nav">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Community</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Events</a></li>
        </ul>
        <ul class="nav navbar-nav navbar-right bg-primary">
-         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+         <li><a href="ad"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
        </ul>
      </div>
   </nav>
 
-  <div class="jumbotron">
+ <!-- form to get the weight and height values to then be read by flask -->
+<div class="jumbotron">
     <h2 align=center> Calculating Your Body Mass Index (BMI)</h2>
-    <p align=center>A simple way to find out if you are a healthy weight.</p>
+    <h4 align=center> A simple way to discover whether you are a healthy weight.</h4><br>
 
-    <form align=center class="form-inline" method=post action ="/bmi">
-      <label for="inputWeight">Weight</label>
-      <input type="number" name={{inputWeightName}} id="inputWeight" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Weight in Kg" required="required"><br><br>
-      <label for="inputHeight">Height</label>
-      <input type="number" name={{inputHeight} id="inputHeight" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Height in cm" required="required"><br><br>
+    <form align=center class="form-inline" method="post" action ="/bmiCalc">
+      <label for="your_weight">Weight in Kgs</label>
+      <input type="" name="your_weight" id="inputWeight" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Weight" required="required"><br><br>
+      <label for="your_height">Height in mts</label>
+      <input type="" name="your_height" id="inputHeight" class="form-control mb-2 mr-sm-2 mb-sm-0" placeholder="Height" required="required"><br><br>
       <button align =center type="submit" class="btn btn-primary">Submit</button>
-      </form>
-
+    </form>
 </div>
+
+<div class="footer" id="copyright">
+  <p>©Merge Consultancy 2019</p>
+</div>
+
+</body>
+</html>
