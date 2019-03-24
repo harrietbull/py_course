@@ -51,6 +51,10 @@ def calc():
         bmi = weight / (height*height)
         return render_template("bmiResult.html", bmi=round(bmi,2))
 
-    
+@app.route("/community")
+def twitter_page():
+    return render_template("twitter.html")
+
+
 if  __name__ == "__main__":
     app.run(debug=True)
